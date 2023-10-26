@@ -107,31 +107,66 @@
             </p>
         </div>
 
-        <div id="among-us-button" style="position: absolute; right: 1.7vw; bottom: 1.2vw; width: 6.6vw; height: 7.8vw; background-color: #E4DE3F; border: 0.2vw solid black; border-radius: 3.1vw; cursor: pointer;">
-            <img src="Assets/Among-us-yellow-character.svg" style="width: 5.5vw; margin-top: -2.2vw; margin-left: 0.4vw;">
+        <div id="among-us-button" style="cursor: pointer;">
+            <div id="among-us-button-background" style="position: absolute; right: 1.7vw; bottom: 1.2vw; width: 6.6vw; height: 7.8vw; background-color: #E4DE3F; border: 0.2vw solid black; border-radius: 3.1vw; cursor: pointer; transition: width 0.5s ease, bottom 0.5s ease, height 0.5s ease;">
+            </div>
+
+            <p id="among-us-text" style="position: absolute; right: 4vw; bottom: 4.3vw; font-family: chilanka; font-size: 0.5vw; transition: right 0.5s ease, font-size 0.5s ease, bottom 0.5s ease;">
+                Characters
+            </p>
+
+            <img src="Assets/Among-us-yellow-character.svg" id="among-us-yellow" style="position: absolute; right: 2.5vw; bottom: 1.5vw; width: 5.5vw; transition: right 0.5s ease, transform 0.5s ease;">
         </div>
 
         <script>
             const mathButton = document.getElementById('learn-maths-button-image');
             const readButton = document.getElementById('learn-to-read-button');
             const blurEffect = document.getElementById('blur-effect');
+            const amongUsButton = document.getElementById('among-us-button');
+            const amongUsButtonBackground = document.getElementById('among-us-button-background');
+            const amongYellow = document.getElementById('among-us-yellow');
+            const amongUsText = document.getElementById('among-us-text');
+
+            //mouseover event listener (start) to amongUsButton
+            amongUsButton.addEventListener('mouseover', function() {
+                amongUsButtonBackground.style.width = '22vw';
+                amongUsButtonBackground.style.height = '3.7vw';
+                amongUsButtonBackground.style.bottom = '3.3vw';
+                amongYellow.style.transform = 'scale(1.1)';
+                amongYellow.style.right = '2.9vw';
+                amongUsText.style.right = '9vw';
+                amongUsText.style.bottom = '0.5vw';
+                amongUsText.style.fontSize = '2.8vw';
+            });
+
+            //mouseout event listener (end) to amongUsButton
+            amongUsButton.addEventListener('mouseout', function() {
+                amongUsButtonBackground.style.width = '6.6vw';
+                amongUsButtonBackground.style.height = '7.8vw';
+                amongUsButtonBackground.style.bottom = '1.2vw';
+                amongYellow.style.transform = 'scale(1)';
+                amongYellow.style.right = '2.5vw';
+                amongUsText.style.right = '4vw';
+                amongUsText.style.bottom = '4.3vw';
+                amongUsText.style.fontSize = '0.5vw';
+            });
     
-            //mouseover event listener to the button
+            //mouseover event listener to mathButton
             mathButton.addEventListener('mouseover', function() {
                 blurEffect.style.opacity = '1';
             });
     
-            //mouseout event listener to the button
+            //mouseout event listener to mathButton
             mathButton.addEventListener('mouseout', function() {
                 blurEffect.style.opacity = '0';
             });
 
-            //mouseover event listener to the button
+            //mouseover event listener to readButton
             readButton.addEventListener('mouseover', function() {
                 blurEffect.style.opacity = '1';
             });
     
-            //mouseout event listener to the button
+            //mouseout event listener to readButton
             readButton.addEventListener('mouseout', function() {
                 blurEffect.style.opacity = '0';
             });
