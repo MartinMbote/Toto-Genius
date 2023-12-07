@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Toto Genius">
+        <meta name="author" content="Martin Maina Mbote">
+
+        <title>
+            TotoGenius
+        </title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+
+        <style>
+            #cloud1 {
+                animation-name: cloud-animation;
+                animation-duration: 50s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                position: absolute;  
+                width: 35vw;
+                top: -7vw;
+            }
+
+            #cloud2 {
+                animation-name: cloud-animation;
+                animation-duration: 25s;
+                animation-iteration-count: infinite;
+                animation-delay: 2s;
+                animation-timing-function: linear;
+                position: absolute; 
+                right: -15vw; 
+                width: 10vw;
+                top: 10vw;
+            }
+
+            @keyframes cloud-animation {
+                0% {
+                    right: -38vw;
+                }
+
+                100% {
+                    right: 100vw;
+                }
+            }
+
+            #learn-maths-button-image:hover {
+                transform: scale(1.1);
+            }
+
+            #learn-to-read-button:hover {
+                transform: scale(1.08);
+            }
+
+            #more-info-button:hover {
+                transform: scale(1.2);
+                border: 0.1vw solid white;
+            }
+
+            #dark-mode-button:hover {
+                transform: scale(1.2);
+                border: 0.1vw solid white;
+            }
+        </style>
+    </head>
+
+    <body style="background-color: #97D2EB; overflow: hidden;">
+        <img src="Assets/Sun.svg" style="position: absolute; left: 60vw; width: 40vw;"> 
+
+        <div id="clouds-section">
+            <img src="Assets/cloud.svg" id="cloud1">
+            <img src="Assets/cloud.svg" id="cloud2">
+        </div>
+
+        <div id="header" style="position: absolute; left: 0vw; top: 0vw; width: 100vw; height: 1.7vw; background-color: #2E9ED8;">
+        </div>
+
+        <img src="Assets/foreground-objects.svg" style="position: absolute; left: 0vw; width: 100vw; bottom: 0vw;">
+
+        
+
+        <a href="index.html">
+            <img src="Assets/toto-genius-title.svg" style="position: absolute; left: 0vw; top: 0vw; width: 24.2vw;">
+        </a>
+
+        <a href="chose-grade.html">
+            <img src="Assets/Back-button.svg" style="position: absolute; bottom: 0vw; width: 6vw;">
+        </a>
+
+        <script src="script.js">
+        </script>
+    </body>
+</html>
