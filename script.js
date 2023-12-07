@@ -30,7 +30,7 @@ function backToHomeButton() {
 }
 
 preschoolButton.addEventListener('mouseover', function() {
-    preschoolButton.style.marginTop = '0vw';
+    preschoolButton.style.marginTop = '0.15vw';
     preschoolButton.style.border = '0.2vw solid rgba(255, 255, 255, 1)';
     preschoolButton.style.backgroundColor = 'rgba(123, 123, 123, 0.9)';
 });
