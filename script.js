@@ -5,6 +5,41 @@ const amongUsButton = document.getElementById('among-us-button');
 const amongUsButtonBackground = document.getElementById('among-us-button-background');
 const amongYellow = document.getElementById('among-us-yellow');
 const amongUsText = document.getElementById('among-us-text');
+const chooseGradeSection = document.getElementById('choose-grade-section');
+const homeSection = document.getElementById('home-section');
+const blackboardSection = document.getElementById('blackboard-section');
+const preschoolButton = document.getElementById('preschool-button');
+
+
+
+function mathButtonClicked() {
+    homeSection.style.opacity = 0;
+    homeSection.style.pointerEvents = 'none';
+    blackboardSection.style.top = '0vw';
+    chooseGradeSection.style.opacity = 1;
+    chooseGradeSection.style.pointerEvents = 'auto';
+}
+
+function backToHomeButton() {
+    homeSection.style.opacity = 1;
+    homeSection.style.pointerEvents = 'auto';
+    homeSection.style.transition = 'opacity 0.5s ease';
+    blackboardSection.style.top = '50vw';
+    chooseGradeSection.style.opacity = 0;
+    chooseGradeSection.style.pointerEvents = 'none';
+}
+
+preschoolButton.addEventListener('mouseover', function() {
+    preschoolButton.style.marginTop = '0vw';
+    preschoolButton.style.border = '0.2vw solid rgba(255, 255, 255, 1)';
+    preschoolButton.style.backgroundColor = 'rgba(123, 123, 123, 0.9)';
+});
+
+preschoolButton.addEventListener('mouseout', function() {
+    preschoolButton.style.marginTop = '1.3vw';
+    preschoolButton.style.border = '0.01vw solid rgba(255, 255, 255, 0.5)';
+    preschoolButton.style.backgroundColor = 'rgba(123, 123, 123, 0.4)';
+});
 
 //mouseover event listener (start) to amongUsButton
 amongUsButton.addEventListener('mouseover', function() {
